@@ -104,10 +104,11 @@ export default function Home() {
                 title: "Herrajes",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                imageURI: "/images/our-work/pic2.jpg",
+                imageURI: "/images/temp/360x225/1.jpg",
               },
-            ].map(({ title, description, imageURI }) => (
+            ].map(({ title, description, imageURI }, i) => (
               <OffersItem
+                key={i}
                 title={title}
                 description={description}
                 imageURI={imageURI}

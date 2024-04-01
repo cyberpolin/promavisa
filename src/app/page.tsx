@@ -12,27 +12,14 @@ export default function Home() {
             <div className="wt-topbar-left">
               <ul className="list-unstyled e-p-bx">
                 <li>
-                  <i className="fa fa-envelope"></i>support@gmail.com
+                  <i className="fa fa-envelope"></i>support@promavisa.com.mx
                 </li>
                 <li>
                   <i className="fa fa-phone"></i>(654) 321-7654
                 </li>
               </ul>
             </div>
-            <div className="wt-topbar-right">
-              <ul className="list-unstyled e-p-bx">
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#Login-form">
-                    <i className="fa fa-user"></i>Login
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#Register-form">
-                    <i className="fa fa-sign-in"></i>Register
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <div className="wt-topbar-right"></div>
           </div>
         </div>
         {/* <!-- Search Link --> */}
@@ -91,20 +78,20 @@ export default function Home() {
                 title: "Madera para construcción",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                imageURI: "/images/our-work/pic2.jpg",
+                imageURI: "/images/temp/360x225/3.png",
               },
 
               {
                 title: "Ebanisteria",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                imageURI: "/images/our-work/pic2.jpg",
+                imageURI: "/images/temp/360x225/2.png",
               },
               {
                 title: "Herrajes",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                imageURI: "/images/temp/360x225/1.jpg",
+                imageURI: "/images/temp/360x225/1.png",
               },
             ].map(({ title, description, imageURI }, i) => (
               <OffersItem
@@ -123,7 +110,7 @@ export default function Home() {
         <div className="container">
           {/* <!-- TITLE START--> */}
           <div className="section-head text-center">
-            <h2 className="text-uppercase">Why Choose us</h2>
+            <h2 className="text-uppercase">Atendemos a...</h2>
             <div className="wt-separator-outer">
               <div className="wt-separator style-square">
                 <span className="separator-left site-bg-primary"></span>
@@ -148,7 +135,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content">
-                    <h5 className="wt-tilte text-uppercase">BEST QUALITY</h5>
+                    <h5 className="wt-tilte text-uppercase">Arquitectos</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing
@@ -166,7 +153,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content ">
-                    <h5 className="wt-tilte text-uppercase">INTEGRITY</h5>
+                    <h5 className="wt-tilte text-uppercase">Carpinteros</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing
@@ -184,7 +171,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content">
-                    <h5 className="wt-tilte text-uppercase">STRATEGY</h5>
+                    <h5 className="wt-tilte text-uppercase">Gobiernos</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing
@@ -202,7 +189,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content">
-                    <h5 className="wt-tilte text-uppercase">SAFETY</h5>
+                    <h5 className="wt-tilte text-uppercase">Gobiernos</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing
@@ -220,7 +207,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content">
-                    <h5 className="wt-tilte text-uppercase">COMMUNITY</h5>
+                    <h5 className="wt-tilte text-uppercase">Proyectos</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing
@@ -238,7 +225,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="icon-content">
-                    <h5 className="wt-tilte text-uppercase">SUSTAINABILITY</h5>
+                    <h5 className="wt-tilte text-uppercase">Carpinteros</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesg indtrysum has been the Ipsum dummy of the printing

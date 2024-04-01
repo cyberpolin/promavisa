@@ -124,8 +124,8 @@ const StickyHeader = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <strong>Our Location </strong>
-                      <span>145 N Los Ave, NY</span>
+                      <strong>Dirección </strong>
+                      <span>Av. Cesar Sandino #333</span>
                     </div>
                   </div>
                 </li>
@@ -137,8 +137,8 @@ const StickyHeader = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <strong>Phone Number</strong>
-                      <span>1500-2309-0202</span>
+                      <strong>Teléfono</strong>
+                      <span>993-123-123</span>
                     </div>
                   </div>
                 </li>
@@ -150,8 +150,8 @@ const StickyHeader = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <strong>Opening Time </strong>
-                      <span>Mon -Sat: 10:00 - 20:00 </span>
+                      <strong>Abrimos </strong>
+                      <span>Lun - Sab: 10:00 - 20:00 </span>
                     </div>
                   </div>
                 </li>

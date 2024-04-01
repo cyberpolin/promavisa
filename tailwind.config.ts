@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        logoGreen: "#39A828",
+        logoDarkGreen: "#0F6E32",
+        logoBrown: "#3F1E22",
+        logoDarkBrown: "#090000",
+      },
+      maxWidth: {
+        "1149": "1149px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,5 +25,5 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+}
 export default config;

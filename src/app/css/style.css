@@ -7879,7 +7879,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
  content:"\2212";
 }
 /*.header-nav .nav > li:last-child{display:none;}*/
-@media only screen and (max-width: 991px) {
+/* @media only screen and (max-width: 991px) {
 header .logo{
 	display:block;
 	padding:4px 0;
@@ -7890,19 +7890,19 @@ header .logo{
 .header-nav .nav  li.has-child.nav-active > a{
 	color:#39A828;
 }
-}
-@media only screen and (max-width: 991px) {
+} */
+/* @media only screen and (max-width: 991px) { */
 /* responsive strat when media screen [991px] css START*/
-.navbar-header {
+/* .navbar-header {
 	float: none;
 }
 .navbar-toggle {
 	display: block;
-}
+} */
 
 
 /* Responsive strat when medai screen [991px] css END*/
-.header-nav {
+/* .header-nav {
 	clear:both;
 	border-bottom:1px solid #E9E9E9 ;
 }
@@ -7972,7 +7972,7 @@ header .logo{
 .has-child .submenu-toogle {
     display:block;
 }
-}
+} */
 /*-------------------------------------
 	2. nav dark version
 -------------------------------------*/  

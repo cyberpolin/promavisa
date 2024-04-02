@@ -185,7 +185,7 @@ const StickyHeader = () => {
         <div>
           <div className={`min-w-full hidden md:flex justify-center`}>
             <div className={`max-w-1149 min-h-16 bg-logoBrown flex-1 `}>
-              <div className="header-nav navbar-collapse">
+              <div className="header-nav ">
                 <MenuContent removeMargin />
               </div>
             </div>

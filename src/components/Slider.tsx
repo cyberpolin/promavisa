@@ -28,15 +28,17 @@ const Slider = ({ images }: { images: String[] }) => {
   useEffect(() => {
     // get and set initial value
     if (carouselHeigth === 0) {
+      const ratio = window.innerWidth <= 640 ? 1.2 : 2.35
       setCarouselWidth(window.innerWidth)
-      setCarouselHeigth(Math.floor(window.innerWidth / 2.35))
+      setCarouselHeigth(Math.floor(window.innerWidth / ratio))
     }
 
     window.addEventListener("resize", ({ target }) => {
-      const width = (window as Window)?.innerWidth || 0
-      console.log("resize event listener added, width: ", width)
+      const width = target?.innerWidth || 0
+
+      const ratio = width <= 640 ? 1.2 : 2.35
       setCarouselWidth(width)
-      setCarouselHeigth(Math.floor(width / 2.35))
+      setCarouselHeigth(Math.floor(width / ratio))
     })
 
     // Clean up the event listener when the component unmounts
@@ -59,7 +61,7 @@ const Slider = ({ images }: { images: String[] }) => {
     >
       {images.map((image, index) => (
         <div
-          className="flex flex-row justify-between w-full h-full bg-cover bg-center bg-no-repeat"
+          className="flex md:m-0 mt-16 flex-row justify-between w-full h-full bg-cover bg-center bg-no-repeat"
           key={index}
           style={{
             minWidth: carouselWidth,
@@ -67,19 +69,19 @@ const Slider = ({ images }: { images: String[] }) => {
             backgroundImage: `url(${image})`,
           }}
         >
-          <div className="w-1/12 content-center ">
+          <div className="md:w-1/12 w-1/3 content-center ">
             <a
               onClick={prevStep}
-              className={`ml-4 w-10 h-10   bg-black  content-center text-center cursor-pointer block rounded-md text-white hover:!text-gray-500`}
+              className={`m-auto w-10 h-10   bg-black  content-center text-center cursor-pointer block rounded-md text-white hover:!text-gray-500`}
             >
               <i className="fa fa-2x fa-chevron-left mt-1"></i>
             </a>
           </div>
-          <div className="w-10/12  ">{/* Put content here */}</div>
-          <div className="w-1/12  content-center">
+          <div className="md:w-10/12 w-1/3 ">{/* Put content here */}</div>
+          <div className="md:w-1/12 w-1/3 content-center">
             <a
               onClick={nextStep}
-              className={`ml-4 w-10 h-10 bg-black content-center text-center cursor-pointer block rounded-md text-white hover:!text-gray-500`}
+              className={`m-auto w-10 h-10 bg-black content-center text-center cursor-pointer block rounded-md text-white hover:!text-gray-500`}
             >
               <i className="fa fa-2x fa-chevron-right mt-1"></i>
             </a>

@@ -39,9 +39,16 @@ const MenuItem = ({
     </ul>
   )
 }
-const MenuContent = ({ removeMargin }: { removeMargin?: boolean }) => {
+const MenuContent = ({
+  removeMargin,
+  toggleMenu,
+}: {
+  removeMargin?: boolean
+  toggleMenu?: () => void
+}) => {
   const inputRef = React.useRef<HTMLInputElement>(null)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen)
     if (!isSearchOpen) {
@@ -49,9 +56,9 @@ const MenuContent = ({ removeMargin }: { removeMargin?: boolean }) => {
     }
   }
   return (
-    <div className="header-nav navbar-collapse min-h-16 bg-logoDarkBrown ">
-      <div className={`flex flex-1 ${removeMargin ? "" : "ml-44"} `}>
-        <MenuItem href="javascript:;" title="Inicio" />
+    <div className="header-nav navbar-collapse min-h-16 bg-logoDarkBrown !justify-end ">
+      <div className={`hidden md:flex flex-1 ${removeMargin ? "" : "ml-44"} `}>
+        <MenuItem href="#" title="Inicio" />
         <MenuItem
           href="javascript:;"
           title="Sucursales"
@@ -66,7 +73,7 @@ const MenuContent = ({ removeMargin }: { removeMargin?: boolean }) => {
         <MenuItem href="#" title="Servicios" />
         <MenuItem href="#" title="Contacto" />
       </div>
-      <div className="flex flex-none mr-8  ">
+      <div className="flex flex-none md:mr-8 mr-4  ">
         <input
           type="search"
           ref={inputRef}
@@ -87,6 +94,10 @@ const MenuContent = ({ removeMargin }: { removeMargin?: boolean }) => {
           className=" m-3 fa fa-search fa-lg text-white hover:!text-logoGreen cursor-pointer"
           onClick={toggleSearch}
         ></i>
+        <i
+          className="hidden mt-3 mb-3 ml-0 mr-0 md:m-3 fa fa-bars fa-lg text-white hover:!text-logoGreen cursor-pointer"
+          onClick={toggleMenu}
+        ></i>
       </div>
     </div>
   )
@@ -94,7 +105,12 @@ const MenuContent = ({ removeMargin }: { removeMargin?: boolean }) => {
 
 const StickyHeader = () => {
   const [isSticky, setIsSticky] = useState(false)
-  const [searchTerm, setSearchTerm] = useState("")
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <>
       <Waypoint
@@ -102,7 +118,7 @@ const StickyHeader = () => {
           setIsSticky(false)
         }}
       >
-        <div className="header-middle bg-white">
+        <div className="hidden md:flex header-middle bg-white">
           <div className="container">
             <div className="logo-header">
               <a href="index.html">
@@ -167,7 +183,7 @@ const StickyHeader = () => {
         topOffset={"60px"}
       >
         <div>
-          <div className={`min-w-full flex justify-center`}>
+          <div className={`min-w-full hidden md:flex justify-center`}>
             <div className={`max-w-1149 min-h-16 bg-logoBrown flex-1 `}>
               <div className="header-nav navbar-collapse">
                 <MenuContent removeMargin />
@@ -177,21 +193,38 @@ const StickyHeader = () => {
           {/* sticky */}
           <div
             className={`min-w-full flex justify-center fixed delay-150 transition-all ease-linear duration-200 ${
-              isSticky ? "top-0" : "-top-40"
+              isSticky ? "top-0" : "md:-top-40 -top-0"
             }`}
           >
             <div className={`max-w-1149 bg-logoBrown flex-1 `}>
+              <ul
+                className={`md:hidden w-2/3 h-screen fixed transition-all ${
+                  isMenuOpen ? "left-0" : "-left-2/3"
+                } p-2 bg-logoDarkBrown z-50 pt-4 `}
+              >
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <li
+                    key={i}
+                    className="p-3 text-lg border-t-2 border-slate-700 border-opacity-10"
+                  >
+                    <a className="!text-slate-300 " href="javascript:;">
+                      Opcion {i}
+                    </a>
+                  </li>
+                ))}
+              </ul>
               <div
-                className={`transition-transform bg-white border radius-5 w-36 h-36 fixed ml-5 p-2 z-50 rounded-b-md`}
+                className={`transition-transform bg-white border radius-5 md:w-36 md:h-36 h-20 w-20 fixed ml-5 p-2 z-10 rounded-b-md`}
               >
                 <Image
+                  className="transition-transform duration-200 ease-linear md:scale-100"
                   src="/images/logotipo.png"
                   width="120"
                   height="150"
                   alt="Proveedora de maderas de Villahermosa"
                 />
               </div>
-              <MenuContent />
+              <MenuContent toggleMenu={toggleMenu} />
             </div>
           </div>
         </div>

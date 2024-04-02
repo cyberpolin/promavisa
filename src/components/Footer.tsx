@@ -147,7 +147,7 @@ const Footer = () => {
             {/* <!-- NEWSLETTER --> */}
             <div className="col-lg-4 col-md-6">
               <div className="widget widget_newsletter">
-                <h4 className="widget-title">Newsletter</h4>
+                <h4 className="widget-title">Noticias</h4>
                 <div className="newsletter-bx">
                   <form role="search" method="post">
                     <div className="input-group">

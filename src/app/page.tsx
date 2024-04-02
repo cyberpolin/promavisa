@@ -4,23 +4,20 @@ import Image from "next/image"
 import StickyHeader from "@/components/StickyHeader"
 export default function Home() {
   return (
-    <div className="page-wraper">
+    <div>
       {/* <!-- HEADER START --> */}
-      <header className="site-header header-style-8 mobile-sider-drawer-menu">
-        <div className="top-bar site-bg-primary">
-          <div className="container">
-            <div className="wt-topbar-left">
-              <ul className="list-unstyled e-p-bx">
-                <li>
-                  <i className="fa fa-envelope"></i>support@promavisa.com.mx
-                </li>
-                <li>
-                  <i className="fa fa-phone"></i>(654) 321-7654
-                </li>
-              </ul>
-            </div>
-            <div className="wt-topbar-right"></div>
-          </div>
+      <header className="site-header header-style-8">
+        <div className="hidden text-white md:bg-logoGreen sm:flex w-full hover:underline md:pl-4 ">
+          <ul className="flex pt-3 pb-3 ">
+            <li>
+              <i className="fa fa-envelope"></i>support@promavisa.com.mx
+            </li>
+            <li>
+              <i className="fa fa-phone"></i>(654) 321-7654
+            </li>
+          </ul>
+
+          <div className="wt-topbar-right"></div>
         </div>
         {/* <!-- Search Link --> */}
         {/* <!-- Search Form --> */}

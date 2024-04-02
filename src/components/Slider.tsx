@@ -34,6 +34,7 @@ const Slider = ({ images }: { images: String[] }) => {
     }
 
     window.addEventListener("resize", ({ target }) => {
+      //@ts-ignore
       const width = target?.innerWidth || 0
 
       const ratio = width <= 640 ? 1.2 : 2.35
